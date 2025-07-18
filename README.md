@@ -1,7 +1,5 @@
-## Screenshots
+<h3>Screenshot 1</h3>
+<img src="images/img1.png" alt="Screenshot 1" width="600">
 
-### Screenshot 1
-![Screenshot 1](images/img1.png)
-
-### Screenshot 2
-![Screenshot 2](images/img2.png)
+<h3>Screenshot 2</h3>
+<img src="images/img2.png" alt="Screenshot 2" width="600">
