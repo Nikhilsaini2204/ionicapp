@@ -1,0 +1,275 @@
+/* GLOBAL STYLES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: #000;
+    color: #999;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+h1,
+h2,
+h3 {
+    color: #fff;
+}
+
+img {
+    width: 100%;
+}
+
+/* SPLASH SCREEN */
+.splash-screen {
+    position: fixed;
+    z-index: 9999;
+    background: #000;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease, visibility 1s;
+}
+
+.splash-logo {
+    width: 300px;
+    animation: zoomIn 2s ease-out;
+}
+
+.loading-bar {
+    width: 60%;
+    max-width: 400px;
+    height: 4px;
+    background: #222;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.loading-bar-progress {
+    width: 0;
+    height: 100%;
+    background: #e50914;
+    transition: width 0.2s ease;
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.2);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.splash-screen.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Netflix Login Page CSS */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.banner {
+    background: url('https://assets.nflxext.com/ffe/siteui/vlv3/5f49a4b6-d749-4035-82b6-bc5b3d4ad1b5/fb174779-7c4c-4a18-b38c-4d12252ee1bd/IN-en-20240408-popsignuptwoweeks-perspective_alpha_website_large.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    position: relative;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.logo img {
+    width: 150px;
+    margin: 20px 0 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 150px);
+    position: relative;
+    z-index: 1;
+}
+
+.form1 {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 60px 68px 40px;
+    border-radius: 4px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.form1 h1 {
+    font-size: 2rem;
+    margin-bottom: 24px;
+}
+
+.input-field {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.text-input {
+    background: #333;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    padding: 16px;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.text-input:focus {
+    outline: none;
+    background: #444;
+}
+
+.input-field span {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    color: #8c8c8c;
+    pointer-events: none;
+    transition: 0.2s ease;
+}
+
+.text-input:focus+span,
+.text-input:not(:placeholder-shown)+span {
+    top: -8px;
+    left: 12px;
+    font-size: 0.75rem;
+    color: #b3b3b3;
+}
+
+.button1,
+.button2 {
+    background-color: #e50914;
+    border: none;
+    color: #fff;
+    padding: 16px;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.button1:hover,
+.button2:hover {
+    background-color: #f6121d;
+}
+
+.or {
+    text-align: center;
+    color: #8c8c8c;
+    margin: 10px 0;
+}
+
+.fp a {
+    color: #b3b3b3;
+    text-decoration: none;
+}
+
+.fp a:hover {
+    text-decoration: underline;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.checkbox label {
+    font-size: 0.9rem;
+}
+
+.signup {
+    margin-top: 20px;
+    color: #737373;
+    font-size: 0.9rem;
+}
+
+.signup a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.signup a:hover {
+    text-decoration: underline;
+}
+
+.more {
+    color: #8c8c8c;
+    font-size: 0.75rem;
+    margin-top: 10px;
+}
+
+footer {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #737373;
+}
+
+.ftr-content {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.ftr a {
+    display: inline-block;
+    margin: 5px 15px 5px 0;
+    color: #737373;
+    text-decoration: none;
+}
+
+.ftr a:hover {
+    text-decoration: underline;
+}
+
+.language select {
+    background: #000;
+    color: #fff;
+    border: 1px solid #333;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+/* Copy the rest of your styles below */

@@ -1,17 +1,52 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Profile
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
+  
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <!-- Profile Image -->
+  <div class="profile-image-container">
+    <ion-img [src]="'assets/img.jpeg'" class="profile-image"></ion-img>
+  </div>
+
+  <ion-button (click)="presentAlert()" class="btn" color="medium">Say Hello</ion-button>
+
+  <!-- Candidate Details -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>About Me</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Name:</strong> Nikhil Saini</p>
+      <p><strong>Age:</strong> 20</p>
+      <p><strong>Email:</strong> nikhil@example.com</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Education</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>10th:</strong> VR public school</p>
+      <p><strong>12th:</strong> VR public school</p>
+      <p><strong>College:</strong> Chitkara university</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Hobbies</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Badminton</strong></p>
+      <p><strong>Listening Music</strong></p>
+      <p><strong>Sleeping</strong></p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

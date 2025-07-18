@@ -1,17 +1,78 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
+  <!-- SPLASH -->
+  <div class="splash-screen" id="splash">
+    <img src="https://i.ibb.co/SNKRx9w/Netflixlogo.png" class="splash-logo" alt="Netflix logo" />
+    <div class="loading-bar">
+      <div class="loading-bar-progress"></div>
+    </div>
+  </div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <!-- LOGIN PAGE -->
+  <header class="banner" id="login">
+    <div class="logo">
+      <img src="https://i.ibb.co/SNKRx9w/Netflixlogo.png" />
+    </div>
+    <div class="main">
+      <div class="form1">
+        <form>
+          <h1>Sign In</h1>
+          <div class="input-field">
+            <input class="text-input" type="email" required placeholder=" " />
+            <span>Email or mobile number</span>
+            <p class="error-message">Please enter a valid e-mail address</p>
+          </div>
+          <div class="input-field">
+            <input class="text-input" type="password" required placeholder=" " />
+            <span>Password</span>
+          </div>
+          <div class="button">
+            <button class="button1" type="submit">Sign In</button>
+          </div>
+          <div class="or">
+            <p>OR</p>
+          </div>
+          <div class="button">
+            <button class="button2" type="button">Use a sign-in code</button>
+          </div>
+          <div class="fp"><a href="#">Forgot Password?</a></div>
+          <div class="checkbox">
+            <label class="container">Remember me
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="signup">
+            <p>New to Netflix?</p>
+            <a href="https://www.netflix.com/">Sign up now</a>
+          </div>
+          <div class="more">
+            <p>This page is protected by Google reCAPTCHA to ensure you're not a bot. <a href="#">Learn more.</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <div class="ftr-content">
+        <div class="contact">
+          Questions? Call <a href="tel:000-800-919-1694">000-800-919-1694</a>
+        </div>
+        <div class="ftr">
+          <a href="#">FAQ</a>
+          <a href="#">Help Centre</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Privacy</a>
+          <a href="#">Cookie Preferences</a>
+          <a href="#">Corporate Information</a>
+        </div>
+        <div class="language">
+          <select>
+            <option>English</option>
+            <option>हिन्दी</option>
+            <option>मराठी</option>
+            <option>Français</option>
+          </select>
+        </div>
+      </div>
+    </footer>
+  </header>
 </ion-content>
